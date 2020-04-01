@@ -13,6 +13,3 @@ alias gx='gitx --all'
 
 alias got='git '
 alias get='git '
-
-alias vim='/usr/local/bin/vim'
-#command -v pyenv 1>/dev/null 2>&1&& eval "$(pyenv init -)"
