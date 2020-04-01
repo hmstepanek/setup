@@ -1,0 +1,26 @@
+[user]
+	name = username
+	email = email
+[core]
+	autocrlf = input
+	safecrlf = true
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  current = rev-parse --abbrev-ref HEAD
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+[merge]
+	tool = p4mergetool
+[mergetool "p4mergetool"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$LOCAL $PWD/$REMOTE $PWD/$MERGED
+	trustExitCode = false
+[mergetool]
+	keepBackup = false
+[diff]
+	tool = p4mergetool
+[difftool "p4mergetool"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
